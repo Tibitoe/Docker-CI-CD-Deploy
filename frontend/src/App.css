@@ -1,0 +1,89 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 1rem;
+  padding: 2.5rem 3rem;
+  text-align: center;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  transition: border-color 0.3s;
+}
+
+.card.online {
+  border-color: #22c55e;
+}
+
+.card.offline {
+  border-color: #ef4444;
+}
+
+.indicator {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #64748b;
+}
+
+.card.loading .indicator {
+  background: #64748b;
+  animation: pulse 1.2s infinite;
+}
+
+.card.online .indicator {
+  background: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+}
+
+.card.offline .indicator {
+  background: #ef4444;
+  box-shadow: 0 0 8px #ef4444;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+.message {
+  font-size: 1rem;
+  color: #94a3b8;
+}
+
+.badge {
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: #0f172a;
+  color: #64748b;
+}
+
+.card.online .badge {
+  background: #14532d;
+  color: #4ade80;
+}
+
+.card.offline .badge {
+  background: #450a0a;
+  color: #f87171;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}

@@ -1,0 +1,19 @@
+services:
+  api:
+    build: ./api
+    env_file: .env
+    environment:
+      HOST: ${API_HOST}
+      PORT: ${API_PORT}
+      NODE_ENV: ${NODE_ENV}
+    ports:
+      - "${API_PORT}:${API_PORT}"
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "${FRONTEND_PORT}:80"
+    depends_on:
+      - api
+    restart: unless-stopped
