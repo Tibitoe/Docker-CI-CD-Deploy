@@ -6,7 +6,7 @@ function App() {
   const [message, setMessage] = useState('')
 
   useEffect(() => {
-    fetch('/api')
+    fetch(import.meta.env.VITE_API_URL || '/api')
       .then((res) => res.json())
       .then((data) => {
         setMessage(data.message)

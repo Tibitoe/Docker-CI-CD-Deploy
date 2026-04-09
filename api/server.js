@@ -1,8 +1,7 @@
 import express from 'express'
 import cors from 'cors'
-import { fileURLToPath } from 'url'
 
-const HOST = process.env.HOST || 'localhost'
+const HOST = process.env.HOST || '0.0.0.0'
 const port = process.env.PORT || 3000
 
 const app = express()
@@ -14,10 +13,8 @@ app.get('/', (req, res) => {
   res.json({ message: 'API is running' })
 })
 
-if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  app.listen(port, HOST, () => {
-    console.log(`API is listening to ${HOST}:${port}`)
-  })
-}
+app.listen(port, HOST, () => {
+  console.log(`API is listening to ${HOST}:${port}`)
+})
 
 export default app
