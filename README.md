@@ -10,7 +10,7 @@ A full-stack application with a React + Vite frontend and an Express.js API, dep
 |---|---|
 | Frontend | [https://resplendent-fairy-b6a0ba.netlify.app/] |
 | API | [https://docker-ci-cd-deploy-api.onrender.com/] |
-| API Docs | [COMING SOON™] |
+| API Docs | [https://tibitoe.github.io/Docker-CI-CD-Deploy/] |
 
 ---
 
