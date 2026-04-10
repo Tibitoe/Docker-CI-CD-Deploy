@@ -5,11 +5,14 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node --watch server.js",
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest --forceExit"
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --forceExit",
+    "generate-openapi": "node scripts/generate-openapi.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "morgan": "^1.10.0",
+    "swagger-jsdoc": "^6.2.8"
   },
   "devDependencies": {
     "jest": "^29.7.0",
